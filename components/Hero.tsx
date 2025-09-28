@@ -33,7 +33,7 @@ const Hero: React.FC<HeroProps> = ({ navigate }) => {
                                 Contact Us
                             </button>
                              <div className="w-full sm:w-auto text-sm font-semibold text-gray-400">
-                                Launching March 2025
+                                Launching March 2026
                             </div>
                         </div>
                     </AnimatedSection>

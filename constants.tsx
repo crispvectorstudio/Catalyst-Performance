@@ -82,7 +82,7 @@ export const launchEventData: LaunchEventData = {
     date: "10am to 4pm",
     time: "Auckland Event Centre",
     venue: "New Zealand",
-    fullDate: "Saturday 1 March 2025 to Sunday 2 March 2026",
+    fullDate: "Saturday 28 Feb 2026 to Sunday 1 March 2026.",
     imageUrl: LAUNCH_EVENT_BG_1,
     about: {
         title: "Catalyst Performance Launch Event",
