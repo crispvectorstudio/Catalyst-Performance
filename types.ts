@@ -19,14 +19,8 @@ export interface Stat {
 
 export interface Founder {
     name: string;
-    imageUrl: string;
-    bio: string[];
-}
-
-export interface EventHighlight {
-    icon: React.ReactNode;
     title: string;
-    description: string;
+    bio: string[];
 }
 
 export interface LaunchEventData {
@@ -36,6 +30,7 @@ export interface LaunchEventData {
     time: string;
     venue: string;
     fullDate: string;
+    eventDate: string; // ISO 8601 format: YYYY-MM-DDTHH:mm:ss
     imageUrl: string;
     about: {
         title: string;

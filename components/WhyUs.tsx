@@ -3,15 +3,12 @@ import AnimatedSection from './AnimatedSection';
 import Counter from './Counter';
 import { stats } from '../constants';
 
-const WhyUs: React.FC = () => {
-    
-    const scrollToContact = () => {
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+interface WhyUsProps {
+    scrollTo: (selector: string) => void;
+}
 
+const WhyUs: React.FC<WhyUsProps> = ({ scrollTo }) => {
+    
     return (
         <AnimatedSection className="container mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center">
@@ -36,8 +33,8 @@ const WhyUs: React.FC = () => {
                         </li>
                     </ul>
                      <div className="mt-8">
-                        <button onClick={scrollToContact} className="bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
-                            Contact Us
+                        <button onClick={() => scrollTo('#contact')} className="bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+                            Register Now
                         </button>
                     </div>
                 </div>

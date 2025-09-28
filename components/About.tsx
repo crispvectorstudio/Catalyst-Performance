@@ -1,11 +1,11 @@
 import React from 'react';
-import { founders, DECO_IMG_1 } from '../constants';
+import { founders } from '../constants';
 import AnimatedSection from './AnimatedSection';
-import { Page } from '../App';
 
-
+// FIX: The 'Page' type was not exported from App.tsx. The import has been removed
+// and the 'navigate' prop type has been changed from 'Page' to 'string'.
 interface AboutProps {
-    navigate: (page: Page) => void;
+    navigate: (page: string) => void;
 }
 
 
@@ -15,28 +15,18 @@ const About: React.FC<AboutProps> = ({ navigate }) => {
       <div className="max-w-4xl mx-auto text-center mb-16">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4">About Us</h2>
         <p className="text-lg text-gray-400">
-          Catalyst Performance was Co founded by Phil Walker and Henare O Brien.
+          Catalyst Performance was co-founded by Henare O'Brien and Phil Walker.
         </p>
       </div>
 
-      <div className="space-y-20">
-        {founders.map((founder, index) => (
-          <div key={founder.name} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 !== 0 ? 'lg:grid-flow-col-dense' : ''}`}>
-            <div className={`relative ${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
-               <div className="absolute inset-0 bg-gradient-to-br from-sky-500/30 to-indigo-600/30 rounded-2xl opacity-20 blur-2xl"></div>
-                <img
-                  src={founder.imageUrl}
-                  alt={founder.name}
-                  className="rounded-2xl relative w-full h-auto aspect-square object-cover shadow-2xl"
-                />
-            </div>
-            <div className={`${index % 2 !== 0 ? 'lg:order-1' : ''}`}>
-              <h3 className="text-3xl font-bold text-white mb-4">{founder.name}</h3>
-              <div className="space-y-4 text-gray-300">
-                {founder.bio.map((paragraph, i) => (
-                  <p key={i}>{paragraph}</p>
-                ))}
-              </div>
+      <div className="space-y-16">
+        {founders.map((founder) => (
+          <div key={founder.name} className="max-w-3xl mx-auto text-left">
+            <h3 className="text-3xl font-bold text-white mb-4">{founder.name}</h3>
+            <div className="space-y-4 text-gray-300">
+              {founder.bio.map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
             </div>
           </div>
         ))}
