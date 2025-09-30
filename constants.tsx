@@ -1,7 +1,7 @@
 import React from 'react';
 import { Service, Stat, Founder, Testimonial, LaunchEventData } from './types';
 
-export const LOGO_URL = "https://philwalkerwriting.com/wp-content/uploads/2025/09/Catalyst-Performance-1.png";
+export const LOGO_URL = "https://i.ibb.co/ycCM7hPR/Asset-3.png";
 export const DECO_IMG_1 = "https://images.unsplash.com/photo-1589834390005-5d4fb9bf3d32?q=80&w=2070&auto=format&fit=crop";
 export const DECO_IMG_2 = "https://philwalkerwriting.com/wp-content/uploads/2025/09/element-1-1.png";
 export const LAUNCH_EVENT_BG_1 = "https://images.unsplash.com/photo-1531315639996-3a7313a23cc1?q=80&w=2070&auto=format&fit=crop";
